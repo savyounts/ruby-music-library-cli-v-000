@@ -11,14 +11,6 @@ class Artist
     @@all
   end
   
-  def save 
-    self.class.all << self
-  end
-  
-  def self. destroy_all 
-    self.all.clear
-  end
-  
   def self.create(name)
     artist = self.new(name)
     artist.save
