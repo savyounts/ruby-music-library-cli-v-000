@@ -2,8 +2,8 @@ class Artist
   attr_accessor :name
   @@all = []
   extend Concerns::Findable
-  extend Persistable :: Instance Methods
-  include Persistable :: Class Methods
+  extend Concerns::Persistable :: Instance Methods
+  include Concerns::Persistable :: Class Methods
   
   def initialize(name)
     @name = name
