@@ -1,7 +1,7 @@
 module Persistant 
   module InstanceMethods 
     def save 
-    self.class.all << self
+      self.class.all << self
     end
   end 
   
