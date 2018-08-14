@@ -8,7 +8,7 @@ module Persistant
   
   module ClassMethods
   
-    def self. destroy_all 
+    def destroy_all 
       self.all.clear
     end
   end 
