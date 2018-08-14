@@ -2,7 +2,6 @@ class Artist
   attr_accessor :name
   @@all = []
   extend Concerns::Findable
-  extend Concerns::Persistable::ClassMethods
   
   def initialize(name)
     @name = name
@@ -13,7 +12,13 @@ class Artist
     @@all
   end
   
+  def save 
+      self.class.all << self
+    end
   
+  def self.destroy_all 
+      self.all.clear
+    end
   
   def self.create(name)
     artist = self.new(name)
