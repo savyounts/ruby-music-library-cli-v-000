@@ -3,7 +3,7 @@ class Artist
   @@all = []
   extend Concerns::Findable
   extend Concerns::Persistable :: InstanceMethods
-  include Persistable :: ClassMethods
+  include Concerns::Persistable :: ClassMethods
   
   def initialize(name)
     @name = name
