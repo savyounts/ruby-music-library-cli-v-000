@@ -3,7 +3,8 @@ class Artist
   @@all = []
   extend Concerns::Findable
   extend Persistable :: Instance Methods
-  include Persistabel :: Class Methods 
+  include Persistable :: Class Methods
+  
   def initialize(name)
     @name = name
     @songs = []
